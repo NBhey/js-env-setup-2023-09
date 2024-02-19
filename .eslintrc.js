@@ -1,9 +1,12 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest/globals":true,
     },
-    "extends": "eslint:recommended",
+    "extends": [
+        "eslint:recommended",
+    ],
     "overrides": [
         {
             "env": {
@@ -21,6 +24,8 @@ module.exports = {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
+    "ignorePatterns":[".eslintrc.js","babel.config.js", "jest.config.js"],
+    plugins:["jest"],
     "rules": {
     }
 }
